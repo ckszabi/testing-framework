@@ -2,11 +2,14 @@ import unittest
 import pytest
 from selenium import webdriver
 from pages.home.webshop_page import WebshopPage
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 
 class TestLogin(unittest.TestCase):
     baseURL = "http://staging.togital.no/konkurrenten/webshop/#/reise/"
-    driver = webdriver.Firefox()
+    driver = webdriver.Remote(
+            command_executor='http://selenium-ch:4444/wd/hub',
+            desired_capabilities=DesiredCapabilities.CHROME)
     # driver.maximize_window() #Find a solution for the maximize window issue
     driver.get(baseURL)
     driver.implicitly_wait(3)
