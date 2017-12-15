@@ -5,7 +5,7 @@ from pages.home.webshop_page import WebshopPage
 
 
 class TestLogin(unittest.TestCase):
-    baseURL = "http://staging.togital.no/konkurrenten/webshop/#/reise"
+    baseURL = "http://staging.togital.no/konkurrenten/webshop/#/reise/"
     driver = webdriver.Firefox()
     # driver.maximize_window() #Find a solution for the maximize window issue
     driver.get(baseURL)
