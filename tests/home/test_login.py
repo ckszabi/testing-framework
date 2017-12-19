@@ -18,7 +18,7 @@ class TestLogin(unittest.TestCase):
     @pytest.mark.run(order=2)
     def test_validLogin(self):
         # Login with the given valid credentials
-        self.wp.login("istvan.kisgyorgy@redrock.no", "1234")
+        self.wp.login("istvan.kisgyorgy@redrock.no", "12345")
         # Make sure that the login was successful by checking the presence of the 'Logout' button
         isLoginSuccessful = self.wp.verifyLoginSuccessful()
         assert isLoginSuccessful == True
