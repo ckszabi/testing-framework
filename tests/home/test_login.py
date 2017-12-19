@@ -6,7 +6,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 
 class TestLogin(unittest.TestCase):
-    baseURL = "http://staging.togital.no/konkurrenten/webshop/#/reise/unfetched2"
+    baseURL = "http://staging.togital.no/konkurrenten/webshop/#/reise/"
     driver = webdriver.Remote(
             command_executor='http://selenium-ch:4444/wd/hub',
             desired_capabilities=DesiredCapabilities.CHROME)
